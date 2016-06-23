@@ -34,7 +34,6 @@ class Math{
                 array_push($result,$i);
             }
         }
-        array_push($result,$i);
         return $result;
         
     }
