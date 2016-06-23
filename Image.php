@@ -71,7 +71,7 @@ class Image
         imageline($this->im, $total_width - $inner_length, $inner_length, $inner_length, $inner_length, $color['red']);
     }
 
-    public function drawPicture($r, $total_width, $total_height, $color,$inner_length)
+    public function drawPicture($r, $total_width, $total_height, $color, $inner_length)
     {
         $r_format = $r;
         sort($r_format);
@@ -82,7 +82,7 @@ class Image
             if ($i == count($r) - 1) {
                 break;
             }
-            imageline($this->im, $i * $one_width+$inner_length, $r[$i] * $one_height+$inner_length, ($i + 1) * $one_width+$inner_length, $r[$i + 1] * $one_height+$inner_length, $color['red']);
+            imageline($this->im, $i * $one_width + $inner_length, $total_height - $r[$i] * $one_height + $inner_length, ($i + 1) * $one_width + $inner_length, $total_height - $r[$i + 1] * $one_height + $inner_length, $color['black']);
         }
     }
 }
